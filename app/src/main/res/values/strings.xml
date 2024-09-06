@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Medica2</string>
+    <string name="intro_title">Welcome</string>
+    <string name="see_all">See All</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="profile">Profile</string>
+    <string name="my_order">My Order</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="cart">Cart</string>
+    <string name="explorer">Explorer</string>
+</resources>

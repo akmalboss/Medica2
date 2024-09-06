@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "488352332133",
+    "project_id": "medica2",
+    "storage_bucket": "medica2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488352332133:android:4066e9ee742ec63431498c",
+        "android_client_info": {
+          "package_name": "uz.medica.medica2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0Rvd8Q1o8x63KLXyNdeOWP0iQR3Yo2kE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
