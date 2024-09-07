@@ -1,4 +1,4 @@
-package uz.medica.medica2
+package uz.medica.medica2.Activity
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package uz.medica.medica2
+package uz.medica.medica2.Activity
 
 import android.os.Bundle
 import android.view.WindowManager
