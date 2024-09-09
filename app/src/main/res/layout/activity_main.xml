@@ -100,6 +100,7 @@
                     android:visibility="gone"
                     app:dotsColor="@color/grey"
                     app:dotsCornerRadius="8dp"
+                    android:layout_marginTop="8dp"
                     app:dotsSize="6dp"
                     app:dotsSpacing="2dp"
                     app:dotsWidthFactor="2.5"
