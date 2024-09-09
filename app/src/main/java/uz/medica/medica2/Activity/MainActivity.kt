@@ -3,11 +3,13 @@ package uz.medica.medica2.Activity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import uz.medica.medica2.Adapter.CategoryAdapter
+import uz.medica.medica2.Adapter.RecommendedAdapter
 import uz.medica.medica2.Adapter.SliderAdapter
 import uz.medica.medica2.Model.SliderModel
 import uz.medica.medica2.ViewModel.MainViewModel
@@ -24,7 +26,18 @@ class MainActivity : BaseActivity() {
 
         initBanner()
         initCategory()
+        initRecommended()
 
+    }
+
+    private fun initRecommended() {
+        binding.progressBarRecommend.visibility=View.VISIBLE
+        viewModel.recommended.observe(this, Observer{
+            binding.viewRecommendation.layoutManager=GridLayoutManager(this@MainActivity, 2)
+            binding.viewRecommendation.adapter=RecommendedAdapter(it)
+            binding.progressBarRecommend.visibility=View.GONE
+        })
+        viewModel.loadRecommended()
     }
 
     private fun initCategory() {
