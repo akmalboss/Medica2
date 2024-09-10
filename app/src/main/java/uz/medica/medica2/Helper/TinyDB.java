@@ -32,7 +32,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 
-import com.example.project1763.Model.ItemsModel;
+import uz.medica.medica2.Model.ItemsModel;
 import com.google.gson.Gson;
 
 import java.io.File;

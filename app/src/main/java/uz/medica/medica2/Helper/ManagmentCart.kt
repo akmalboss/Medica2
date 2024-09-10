@@ -1,15 +1,18 @@
-package com.example.project1762.Helper
+//package com.example.project1762.Helper
+
+package uz.medica.medica2.Helper
 
 import android.content.Context
 import android.widget.Toast
-import com.example.project1763.Model.ItemsModel
+import uz.medica.medica2.Helper.TinyDB
+import uz.medica.medica2.Model.ItemsModel
 
 
 class ManagmentCart(val context: Context) {
 
     private val tinyDB = TinyDB(context)
 
-    fun insertFood(item: ItemsModel) {
+    fun insertItem(item: ItemsModel) {
         var listFood = getListCart()
         val existAlready = listFood.any { it.title == item.title }
         val index = listFood.indexOfFirst { it.title == item.title }
