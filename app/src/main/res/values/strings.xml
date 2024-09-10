@@ -8,4 +8,10 @@
     <string name="wishlist">Wishlist</string>
     <string name="cart">Cart</string>
     <string name="explorer">Explorer</string>
+    <string name="my_cart">My Cart</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="fee_delivery">Fee Delivery</string>
+    <string name="total_tax">Total Tax</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="naqd_pul">Naqd pul</string>
 </resources>
