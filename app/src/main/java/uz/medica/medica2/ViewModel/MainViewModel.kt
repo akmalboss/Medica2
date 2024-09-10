@@ -24,6 +24,29 @@ class MainViewModel() : ViewModel() {
     val categories: LiveData<MutableList<CategoryModel>> = _category
     val recommended: LiveData<MutableList<ItemsModel>> = _recommended
 
+    fun loadFiltered(id:String) {
+        val Ref = firebaseDatabase.getReference("Items")
+        val query: Query = Ref.orderByChild("categoryId").equalTo(id)
+        query.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val lists = mutableListOf<ItemsModel>()
+                for (childSnapshot in snapshot.children) {
+                    val list = childSnapshot.getValue(ItemsModel::class.java)
+                    if (list != null) {
+                        lists.add(list)
+                    }
+                }
+                _recommended.value = lists
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
+
+    }
+
     fun loadRecommended() {
         val Ref = firebaseDatabase.getReference("Items")
         val query: Query = Ref.orderByChild("showRecommended").equalTo(true)
