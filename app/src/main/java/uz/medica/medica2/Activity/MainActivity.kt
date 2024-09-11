@@ -1,5 +1,6 @@
 package uz.medica.medica2.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
@@ -27,7 +28,14 @@ class MainActivity : BaseActivity() {
         initBanner()
         initCategory()
         initRecommended()
+        initBottomMenu()
 
+    }
+
+    private fun initBottomMenu() {
+        binding.cartBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity, CartActivity::class.java))
+        }
     }
 
     private fun initRecommended() {
