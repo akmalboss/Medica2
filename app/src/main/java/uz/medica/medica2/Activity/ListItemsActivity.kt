@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
+import uz.medica.medica2.Adapter.ListItemsAdapter
 import uz.medica.medica2.R
 import uz.medica.medica2.ViewModel.MainViewModel
 import uz.medica.medica2.databinding.ActivityListItemsBinding
@@ -27,9 +28,11 @@ class ListItemsActivity : BaseActivity() {
 
     private fun initList() {
         binding.apply {
+            binding.backBtn.setOnClickListener { finish() }
             progressBarList.visibility= View.VISIBLE
             viewModel.recommended.observe(this@ListItemsActivity, Observer {
                 viewList.layoutManager=GridLayoutManager(this@ListItemsActivity,2)
+                viewList.adapter=ListItemsAdapter(it)
                 progressBarList.visibility=View.GONE
             })
             viewModel.loadFiltered(id)

@@ -29,7 +29,7 @@ class CartAdapter(
         val item = listItemSelected[position]
 
         holder.binding.titleTxt.text = item.title
-        holder.binding.feeEachTime.text = "$${item.showRecommended}"
+        holder.binding.feeEachTime.text = "$${item.price}"
         holder.binding.totalEachItem.text = "$${Math.round(item.numberInCart * item.price)}"
         holder.binding.numberItemTxt.text = item.numberInCart.toString()
 
